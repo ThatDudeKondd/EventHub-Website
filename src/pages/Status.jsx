@@ -1,0 +1,73 @@
+import React from 'react';
+import { Activity, Server, Shield, CheckCircle } from 'lucide-react';
+
+export default function Status() {
+  return (
+    <div className="max-w-7xl mx-auto pt-28 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 animate-in fade-in slide-in-from-bottom-4 duration-500 relative min-h-screen overflow-hidden">
+      
+      {/* Coming Soon Overlay Modal */}
+      <div className="absolute inset-0 z-20 flex items-center justify-center px-4 pt-10">
+        <div className="bg-slate-900/90 border border-indigo-500/40 p-8 md:p-12 rounded-3xl backdrop-blur-2xl shadow-2xl text-center max-w-lg w-full animate-in zoom-in-95 duration-300">
+          <div className="w-16 h-16 rounded-2xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center mx-auto mb-6 text-indigo-400 shadow-lg shadow-indigo-600/20">
+            <Activity size={30} className="animate-pulse" />
+          </div>
+          <span className="px-3 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20 font-mono uppercase tracking-wider">
+            System Monitoring
+          </span>
+          <h1 className="text-3xl font-extrabold text-white mt-3 tracking-tight">Real Stats will be here soon!</h1>
+          <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+            We are actively connecting live ER:LC game server telemetry, bot latency trackers, and database health metrics. Check back soon!
+          </p>
+          <div className="mt-8">
+            <a
+              href="/"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition-all"
+            >
+              Return Home
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Blurred Background Status Preview */}
+      <div className="filter blur-md select-none pointer-events-none opacity-30 space-y-8">
+        <div className="flex justify-between items-center">
+          <div>
+            <div className="h-4 w-32 bg-indigo-500/20 rounded mb-2"></div>
+            <div className="h-8 w-64 bg-white/20 rounded"></div>
+          </div>
+          <div className="h-10 w-48 bg-slate-800 rounded-xl border border-slate-700 flex items-center px-4 gap-2">
+            <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+            <div className="h-3 w-24 bg-white/20 rounded"></div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { title: 'API Gateway', status: 'Operational' },
+            { title: 'Discord Bot Shard 1', status: 'Operational' },
+            { title: 'ER:LC Game Sync', status: 'Syncing' },
+            { title: 'aiosqlite Database', status: 'Operational' }
+          ].map((item, i) => (
+            <div key={i} className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 h-36 flex flex-col justify-between">
+              <div className="flex justify-between items-start">
+                <span className="text-xs text-gray-400 font-mono">{item.title}</span>
+                <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+              </div>
+              <div className="space-y-2">
+                <div className="h-6 w-20 bg-white/20 rounded"></div>
+                <div className="h-3 w-28 bg-gray-600/30 rounded"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2 bg-slate-900/60 border border-slate-800 rounded-2xl h-80"></div>
+          <div className="bg-slate-900/60 border border-slate-800 rounded-2xl h-80"></div>
+        </div>
+      </div>
+
+    </div>
+  );
+}

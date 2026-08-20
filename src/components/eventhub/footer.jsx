@@ -123,7 +123,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5 text-sm">
               <li>
                 <Link
-                  to="/privacy"
+                  to="/documentation#privacy"
                   className="text-slate-400 hover:text-indigo-400 transition-colors"
                 >
                   Privacy Policy
@@ -131,7 +131,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/terms"
+                  to="/documentation#terms"
                   className="text-slate-400 hover:text-indigo-400 transition-colors"
                 >
                   Terms of Service

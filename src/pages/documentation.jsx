@@ -1,17 +1,24 @@
-import React, { useState } from "react";
-import {
-  Shield,
-  FileText,
-  Terminal,
-  Gamepad2,
-  Server,
-  CheckCircle,
-  AlertTriangle,
-  ExternalLink,
-} from "lucide-react";
+import { useState } from "react";
+
+const VALID_TABS = [
+  "privacy",
+  "terms",
+  "general-commands",
+  "erlc-commands",
+  "events-commands",
+];
 
 export default function Docs() {
   const [activeTab, setActiveTab] = useState("privacy");
+  const location = useLocation();
+
+  // Sync the active tab with the URL hash (e.g. /documentation#terms)
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (VALID_TABS.includes(hash)) {
+      setActiveTab(hash);
+    }
+  }, [location.hash]);
 
   return (
     <div className="max-w-7xl mx-auto pt-28 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 animate-slide-up">

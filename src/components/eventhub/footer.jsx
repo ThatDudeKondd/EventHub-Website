@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Shield, Heart, ExternalLink, Bot } from "lucide-react";
-import Logo from "./Logo";
+import Logo from "./logo";
 import { INVITE_URL, SUPPORT_URL } from "../../lib/links";
 
 export default function Footer() {

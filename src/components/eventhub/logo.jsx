@@ -1,5 +1,4 @@
-import React from "react";
-import logoImg from "./logo";
+import logoImg from "./logo.jpg";
 
 export default function Logo({ className = "w-10 h-10" }) {
   return (

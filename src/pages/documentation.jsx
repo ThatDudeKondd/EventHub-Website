@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 const VALID_TABS = [
   "privacy",
   "terms",

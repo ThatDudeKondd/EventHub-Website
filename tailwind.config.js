@@ -3,10 +3,7 @@ export default {
   // Enable dark mode using the 'class' strategy (tied to the <html class="dark"> in index.html)
   darkMode: ["class"],
   // Scan all files in the src folder for Tailwind classes
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       // Map our CSS HSL variables to Tailwind color names
@@ -37,13 +34,13 @@ export default {
       },
       // Define your custom font stacks
       fontFamily: {
-        heading: ['Inter', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        display: ['Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        heading: ["Inter", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        display: ["Inter", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
     },
   },
   // Add the tailwindcss-animate plugin for smooth animations
   plugins: [require("tailwindcss-animate")],
-}
+};

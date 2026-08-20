@@ -1,7 +1,9 @@
 /* =========================================
    BASE STYLES & RESET (PURPLE THEME)
 ========================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -15,8 +17,8 @@
   --text-muted: #94a3b8;
   --accent: #c084fc;
   --accent-glow: rgba(192, 132, 252, 0.25);
-  --font-sans: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
 body {
@@ -32,7 +34,8 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -54,15 +57,20 @@ ul, ol {
 .background .grid {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(to right, rgba(192, 132, 252, 0.03) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(192, 132, 252, 0.03) 1px, transparent 1px);
+  background-image:
+    linear-gradient(to right, rgba(192, 132, 252, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(192, 132, 252, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: gridMove 20s linear infinite;
 }
 
 @keyframes gridMove {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(50px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
 }
 
 .orb {
@@ -91,9 +99,18 @@ ul, ol {
 }
 
 @keyframes pulseOrb {
-  0% { transform: scale(1) translate(0, 0); opacity: 0.4; }
-  50% { transform: scale(1.15) translate(30px, -20px); opacity: 0.7; }
-  100% { transform: scale(0.95) translate(-20px, 30px); opacity: 0.5; }
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.15) translate(30px, -20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.95) translate(-20px, 30px);
+    opacity: 0.5;
+  }
 }
 
 .noise {
@@ -108,7 +125,11 @@ ul, ol {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.15) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(192, 132, 252, 0.15) 0%,
+    transparent 70%
+  );
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 999;
@@ -274,7 +295,10 @@ ul, ol {
   backdrop-filter: blur(16px);
   position: relative;
   overflow: hidden;
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .glass-card:hover {

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Shield } from 'lucide-react';
+import React from "react";
+import { Shield } from "lucide-react";
 
 export default function TermsPage() {
   return (
@@ -10,30 +10,46 @@ export default function TermsPage() {
             <Shield className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-3xl font-extrabold text-white">Terms of Service</h1>
-            <p className="text-xs text-slate-400 font-mono">Last updated: August 2026</p>
+            <h1 className="text-3xl font-extrabold text-white">
+              Terms of Service
+            </h1>
+            <p className="text-xs text-slate-400 font-mono">
+              Last updated: August 2026
+            </p>
           </div>
         </div>
 
         <div className="space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
           <section>
-            <h2 className="text-lg font-bold text-white mb-2">1. Acceptance of Terms</h2>
+            <h2 className="text-lg font-bold text-white mb-2">
+              1. Acceptance of Terms
+            </h2>
             <p className="text-slate-400">
-              By adding EventHub to your Discord server or using our web application, you agree to comply with these Terms of Service and all applicable Discord Community Guidelines.
+              By adding EventHub to your Discord server or using our web
+              application, you agree to comply with these Terms of Service and
+              all applicable Discord Community Guidelines.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-white mb-2">2. Bot Usage & Conduct</h2>
+            <h2 className="text-lg font-bold text-white mb-2">
+              2. Bot Usage & Conduct
+            </h2>
             <p className="text-slate-400">
-              Users must not abuse bot commands, attempt to exploit API endpoints, or use EventHub for unauthorized harassment or rule violations within ER:LC servers.
+              Users must not abuse bot commands, attempt to exploit API
+              endpoints, or use EventHub for unauthorized harassment or rule
+              violations within ER:LC servers.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-white mb-2">3. Limitation of Liability</h2>
+            <h2 className="text-lg font-bold text-white mb-2">
+              3. Limitation of Liability
+            </h2>
             <p className="text-slate-400">
-              EventHub is provided "as is" without warranty of any kind. We are not responsible for game server downtime, lost configurations, or third-party disruptions.
+              EventHub is provided "as is" without warranty of any kind. We are
+              not responsible for game server downtime, lost configurations, or
+              third-party disruptions.
             </p>
           </section>
         </div>

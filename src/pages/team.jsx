@@ -1,31 +1,31 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Users, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
+import { Users, ArrowRight } from "lucide-react";
 
 const teamMembers = [
   {
-    name: 'Armin',
-    role: 'Founder',
-    letter: 'A',
+    name: "Armin",
+    role: "Founder",
+    letter: "A",
   },
   {
-    name: 'XxitzAjxx100guest666',
-    role: 'Lead Developer',
-    letter: 'X',
+    name: "XxitzAjxx100guest666",
+    role: "Lead Developer",
+    letter: "X",
   },
   {
-    name: 'Kondd1123',
-    role: 'Developer',
-    letter: 'K',
+    name: "Kondd1123",
+    role: "Developer",
+    letter: "K",
   },
   {
-    name: 'granata2012_23',
-    role: 'Developer',
-    letter: 'G',
+    name: "granata2012_23",
+    role: "Developer",
+    letter: "G",
   },
   {
-    name: 'Ayan90083211233',
-    role: 'Community Manager',
-    letter: 'A',
+    name: "Ayan90083211233",
+    role: "Community Manager",
+    letter: "A",
   },
 ];
 
@@ -42,7 +42,7 @@ function useScrollReveal() {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (ref.current) {
@@ -74,10 +74,12 @@ export default function Team() {
       `}</style>
 
       {/* Header */}
-      <div 
+      <div
         ref={headerRef}
         className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 transform ${
-          headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          headerVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
         }`}
       >
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4">
@@ -93,17 +95,24 @@ export default function Team() {
       </div>
 
       {/* Team Grid */}
-      <div 
+      <div
         ref={gridRef}
         className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 transition-all duration-1000 transform ${
-          gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}
       >
         {teamMembers.map((member, idx) => {
-          const floatClass = idx % 4 === 0 ? 'animate-float-1' : idx % 4 === 1 ? 'animate-float-2' : idx % 4 === 2 ? 'animate-float-3' : 'animate-float-4';
+          const floatClass =
+            idx % 4 === 0
+              ? "animate-float-1"
+              : idx % 4 === 1
+                ? "animate-float-2"
+                : idx % 4 === 2
+                  ? "animate-float-3"
+                  : "animate-float-4";
           return (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`bg-card/40 border border-border rounded-3xl p-8 backdrop-blur-xl flex flex-col items-center text-center shadow-lg shadow-indigo-950/20 hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-600/30 ${floatClass}`}
             >
               <div className="w-20 h-20 rounded-full bg-gradient-to-b from-indigo-500/20 to-purple-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-300 text-2xl font-bold mb-6 group-hover:scale-105 transition-transform shadow-lg shadow-indigo-600/10">

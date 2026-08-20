@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Code, Headphones, ExternalLink, Sparkles } from 'lucide-react';
-import { APPLICATION_FORM, SUPPORT_URL } from '../lib/links';
+import React, { useState, useEffect, useRef } from "react";
+import { Code, Headphones, ExternalLink, Sparkles } from "lucide-react";
+import { APPLICATION_FORM, SUPPORT_URL } from "../lib/links";
 
 // Custom hook for scroll-triggered fade-in animation
 function useScrollReveal() {
@@ -15,7 +15,7 @@ function useScrollReveal() {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (ref.current) {
@@ -53,10 +53,12 @@ export default function ApplicationsPage() {
       `}</style>
 
       {/* Header */}
-      <div 
+      <div
         ref={headerRef}
         className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 transform ${
-          headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          headerVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
         }`}
       >
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs sm:text-sm font-medium text-indigo-300 mb-4">
@@ -64,18 +66,20 @@ export default function ApplicationsPage() {
           <span>Careers</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-          Interested in joining <span className="text-indigo-400">EventHub?</span>
+          Interested in joining{" "}
+          <span className="text-indigo-400">EventHub?</span>
         </h1>
         <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-          We're always looking for passionate people to help improve EventHub and support our growing community.
+          We're always looking for passionate people to help improve EventHub
+          and support our growing community.
         </p>
       </div>
 
       {/* Teams Grid with Hovering / Floating Effect */}
-      <div 
+      <div
         ref={gridRef}
         className={`grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto transition-all duration-1000 transform ${
-          gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}
       >
         {/* Developer Team Card */}
@@ -84,9 +88,12 @@ export default function ApplicationsPage() {
             <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 shadow-inner">
               <Code className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-3">Developer Team</h3>
+            <h3 className="text-2xl font-bold text-white mb-3">
+              Developer Team
+            </h3>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-8">
-              Help develop new features, improve existing systems, fix bugs, and shape the future of EventHub.
+              Help develop new features, improve existing systems, fix bugs, and
+              shape the future of EventHub.
             </p>
           </div>
 
@@ -109,7 +116,8 @@ export default function ApplicationsPage() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-3">Support Team</h3>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-8">
-              Help users, answer questions, moderate the support server, and provide technical assistance to the community.
+              Help users, answer questions, moderate the support server, and
+              provide technical assistance to the community.
             </p>
           </div>
 
@@ -128,7 +136,16 @@ export default function ApplicationsPage() {
       {/* Support Server Callout */}
       <div className="max-w-4xl mx-auto mt-12 text-center">
         <p className="text-slate-400 text-sm">
-          Make sure you are in our <a href={SUPPORT_URL} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:underline font-medium">Support Discord server</a> before submitting your application.
+          Make sure you are in our{" "}
+          <a
+            href={SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-400 hover:underline font-medium"
+          >
+            Support Discord server
+          </a>{" "}
+          before submitting your application.
         </p>
       </div>
     </div>

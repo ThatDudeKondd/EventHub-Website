@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Search, Command, Terminal } from 'lucide-react';
-import { commandCategories, commands } from '../lib/commands';
+import React, { useState, useEffect, useRef } from "react";
+import { Search, Command, Terminal } from "lucide-react";
+import { commandCategories, commands } from "../lib/commands";
 
 // Custom hook for scroll-triggered fade-in animation
 function useScrollReveal() {
@@ -15,7 +15,7 @@ function useScrollReveal() {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (ref.current) {
@@ -29,16 +29,18 @@ function useScrollReveal() {
 }
 
 export default function CommandsPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const [headerRef, headerVisible] = useScrollReveal();
   const [gridRef, gridVisible] = useScrollReveal();
 
   const filteredCommands = commands.filter((cmd) => {
-    const matchesCategory = selectedCategory === 'all' || cmd.category === selectedCategory;
-    const matchesSearch = cmd.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          cmd.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory =
+      selectedCategory === "all" || cmd.category === selectedCategory;
+    const matchesSearch =
+      cmd.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      cmd.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -57,10 +59,12 @@ export default function CommandsPage() {
       `}</style>
 
       {/* Header */}
-      <div 
+      <div
         ref={headerRef}
         className={`text-center max-w-3xl mx-auto mb-12 transition-all duration-1000 transform ${
-          headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          headerVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
         }`}
       >
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs sm:text-sm font-medium text-indigo-300 mb-4">
@@ -71,7 +75,8 @@ export default function CommandsPage() {
           Master Every <span className="text-indigo-400">EventHub Command</span>
         </h1>
         <p className="text-slate-400 text-base sm:text-lg">
-          Browse all available slash commands, view permission requirements, and copy syntax patterns for your server.
+          Browse all available slash commands, view permission requirements, and
+          copy syntax patterns for your server.
         </p>
       </div>
 
@@ -80,11 +85,11 @@ export default function CommandsPage() {
         {/* Category Pills (Uniform Styling) */}
         <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
           <button
-            onClick={() => setSelectedCategory('all')}
+            onClick={() => setSelectedCategory("all")}
             className={`px-4 py-2 rounded-xl text-sm font-medium transition-all backdrop-blur-xl ${
-              selectedCategory === 'all' 
-                ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 border border-indigo-500/50' 
-                : 'bg-slate-900/40 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/40 hover:bg-slate-800/60'
+              selectedCategory === "all"
+                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 border border-indigo-500/50"
+                : "bg-slate-900/40 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/40 hover:bg-slate-800/60"
             }`}
           >
             All Commands
@@ -94,9 +99,9 @@ export default function CommandsPage() {
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-4 py-2 rounded-xl text-sm font-medium transition-all backdrop-blur-xl ${
-                selectedCategory === cat.id 
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 border border-indigo-500/50' 
-                  : 'bg-slate-900/40 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/40 hover:bg-slate-800/60'
+                selectedCategory === cat.id
+                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 border border-indigo-500/50"
+                  : "bg-slate-900/40 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/40 hover:bg-slate-800/60"
               }`}
             >
               {cat.name}
@@ -118,18 +123,25 @@ export default function CommandsPage() {
       </div>
 
       {/* Commands Grid with Floating Effect */}
-      <div 
+      <div
         ref={gridRef}
         className={`grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-1000 transform ${
-          gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+          gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
         }`}
       >
         {filteredCommands.length > 0 ? (
           filteredCommands.map((cmd, idx) => {
-            const floatClass = idx % 4 === 0 ? 'animate-float-1' : idx % 4 === 1 ? 'animate-float-2' : idx % 4 === 2 ? 'animate-float-3' : 'animate-float-4';
+            const floatClass =
+              idx % 4 === 0
+                ? "animate-float-1"
+                : idx % 4 === 1
+                  ? "animate-float-2"
+                  : idx % 4 === 2
+                    ? "animate-float-3"
+                    : "animate-float-4";
             return (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`bg-slate-900/40 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition-all duration-300 flex flex-col justify-between backdrop-blur-xl shadow-lg shadow-indigo-950/20 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-600/30 ${floatClass}`}
               >
                 <div>
@@ -147,7 +159,10 @@ export default function CommandsPage() {
                 </div>
 
                 <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-slate-400">
-                  <span className="text-slate-500">Example: <code className="text-indigo-300">{cmd.example}</code></span>
+                  <span className="text-slate-500">
+                    Example:{" "}
+                    <code className="text-indigo-300">{cmd.example}</code>
+                  </span>
                 </div>
               </div>
             );
@@ -155,8 +170,12 @@ export default function CommandsPage() {
         ) : (
           <div className="col-span-full py-16 text-center bg-slate-900/40 border border-slate-800 rounded-2xl backdrop-blur-xl">
             <Terminal className="w-12 h-12 text-slate-500 mx-auto mb-3" />
-            <h3 className="text-lg font-semibold text-white mb-1">No commands found</h3>
-            <p className="text-slate-400 text-sm">Try adjusting your search query or selected category filter.</p>
+            <h3 className="text-lg font-semibold text-white mb-1">
+              No commands found
+            </h3>
+            <p className="text-slate-400 text-sm">
+              Try adjusting your search query or selected category filter.
+            </p>
           </div>
         )}
       </div>

@@ -1,8 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Bot, Sparkles, Shield, Activity, FileText, Users, BookOpen, Command, ChevronRight, Globe, LayoutDashboard } from 'lucide-react';
-import Logo from './Logo';
-import { INVITE_URL } from '../../lib/links';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
+  Menu,
+  X,
+  Bot,
+  Sparkles,
+  Shield,
+  Activity,
+  FileText,
+  Users,
+  BookOpen,
+  Command,
+  ChevronRight,
+  Globe,
+  LayoutDashboard,
+} from "lucide-react";
+import Logo from "./logo";
+import { INVITE_URL } from "../../lib/links";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +27,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Close mobile menu on route change
@@ -23,19 +37,21 @@ export default function Navbar() {
   }, [location.pathname]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Commands', path: '/commands', icon: Command },
-    { name: 'Events', path: '/events', icon: Sparkles },
-    { name: 'Status', path: '/status', icon: Activity },
-    { name: 'Applications', path: '/applications', icon: FileText },
-    { name: 'Docs', path: '/documentation', icon: BookOpen },
-    { name: 'Team', path: '/team', icon: Users },
-    { name: 'Affiliates', path: '/affiliates', icon: Globe },
-    { name: 'Dashboard', path: '/dashboard', icon: LayoutDashboard },
+    { name: "Home", path: "/" },
+    { name: "Commands", path: "/commands", icon: Command },
+    { name: "Events", path: "/events", icon: Sparkles },
+    { name: "Status", path: "/status", icon: Activity },
+    { name: "Applications", path: "/applications", icon: FileText },
+    { name: "Docs", path: "/documentation", icon: BookOpen },
+    { name: "Team", path: "/team", icon: Users },
+    { name: "Affiliates", path: "/affiliates", icon: Globe },
+    { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass-strong py-3 shadow-xl shadow-black/20' : 'bg-transparent py-5'}`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-strong py-3 shadow-xl shadow-black/20" : "bg-transparent py-5"}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo Brand */}
@@ -44,9 +60,13 @@ export default function Navbar() {
             <div className="flex flex-col">
               <span className="font-extrabold text-lg text-white tracking-tight flex items-center gap-1.5">
                 Event<span className="text-indigo-400">Hub</span>
-                <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">v2.4</span>
+                <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                  v2.4
+                </span>
               </span>
-              <span className="text-xs text-slate-400 font-medium hidden sm:inline-block">ER:LC Automated Dispatch</span>
+              <span className="text-xs text-slate-400 font-medium hidden sm:inline-block">
+                ER:LC Automated Dispatch
+              </span>
             </div>
           </Link>
 
@@ -58,7 +78,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`px-3 py-2 rounded-full text-xs xl:text-sm font-medium whitespace-nowrap transition-all duration-200 ${isActive ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30' : 'text-slate-300 hover:text-white hover:bg-slate-800/60'}`}
+                  className={`px-3 py-2 rounded-full text-xs xl:text-sm font-medium whitespace-nowrap transition-all duration-200 ${isActive ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/30" : "text-slate-300 hover:text-white hover:bg-slate-800/60"}`}
                 >
                   {link.name}
                 </Link>
@@ -101,7 +121,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all ${isActive ? 'bg-indigo-600 text-white' : 'text-slate-300 hover:bg-slate-800/80 hover:text-white'}`}
+                  className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all ${isActive ? "bg-indigo-600 text-white" : "text-slate-300 hover:bg-slate-800/80 hover:text-white"}`}
                 >
                   <div className="flex items-center gap-3">
                     {Icon && <Icon className="w-4 h-4 text-indigo-400" />}

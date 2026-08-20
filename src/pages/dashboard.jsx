@@ -1,10 +1,9 @@
-import React from 'react';
-import { Lock, Sparkles, Terminal } from 'lucide-react';
+import React from "react";
+import { Lock, Sparkles, Terminal } from "lucide-react";
 
 export default function Dashboard() {
   return (
     <div className="max-w-7xl mx-auto pt-28 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 animate-in fade-in slide-in-from-bottom-4 duration-500 relative min-h-screen overflow-hidden">
-      
       {/* Coming Soon Overlay Modal */}
       <div className="absolute inset-0 z-20 flex items-center justify-center px-4 pt-10">
         <div className="bg-slate-900/90 border border-indigo-500/40 p-8 md:p-12 rounded-3xl backdrop-blur-2xl shadow-2xl text-center max-w-lg w-full laser-border animate-in zoom-in-95 duration-300">
@@ -14,9 +13,12 @@ export default function Dashboard() {
           <span className="px-3 py-1 text-xs font-semibold bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20 font-mono uppercase tracking-wider">
             Phase 2 Development
           </span>
-          <h1 className="text-3xl font-extrabold text-white mt-3 tracking-tight">Dashboard Coming Soon</h1>
+          <h1 className="text-3xl font-extrabold text-white mt-3 tracking-tight">
+            Dashboard Coming Soon
+          </h1>
           <p className="text-gray-400 text-sm mt-2 leading-relaxed">
-            We are actively wiring up live ER:LC game server syncing, automated shift leaderboards, and remote command dispatch. Check back soon!
+            We are actively wiring up live ER:LC game server syncing, automated
+            shift leaderboards, and remote command dispatch. Check back soon!
           </p>
           <div className="mt-8">
             <a
@@ -41,7 +43,10 @@ export default function Dashboard() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 h-32"></div>
+            <div
+              key={i}
+              className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 h-32"
+            ></div>
           ))}
         </div>
 
@@ -50,7 +55,6 @@ export default function Dashboard() {
           <div className="bg-slate-900/60 border border-slate-800 rounded-2xl h-80"></div>
         </div>
       </div>
-      
     </div>
   );
 }

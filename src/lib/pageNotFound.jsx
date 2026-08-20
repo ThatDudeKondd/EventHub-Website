@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ShieldAlert, Home, ArrowLeft } from 'lucide-react';
-import { SUPPORT_URL } from './links';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ShieldAlert, Home, ArrowLeft } from "lucide-react";
+import { SUPPORT_URL } from "./links";
 
 export default function PageNotFound() {
   return (
@@ -15,10 +15,15 @@ export default function PageNotFound() {
           <ShieldAlert className="w-8 h-8" />
         </div>
 
-        <h1 className="text-6xl font-extrabold text-gradient mb-2 font-mono">404</h1>
-        <h2 className="text-2xl font-bold text-white mb-3">Dispatch Not Found</h2>
+        <h1 className="text-6xl font-extrabold text-gradient mb-2 font-mono">
+          404
+        </h1>
+        <h2 className="text-2xl font-bold text-white mb-3">
+          Dispatch Not Found
+        </h2>
         <p className="text-slate-400 text-sm sm:text-base mb-8">
-          The requested coordinate or channel route doesn't exist or has been decommissioned from the ER:LC network.
+          The requested coordinate or channel route doesn't exist or has been
+          decommissioned from the ER:LC network.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">

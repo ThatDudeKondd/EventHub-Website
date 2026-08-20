@@ -1,5 +1,5 @@
-import React from 'react';
-import { Shield } from 'lucide-react';
+import React from "react";
+import { Shield } from "lucide-react";
 
 export default function PrivacyPage() {
   return (
@@ -10,30 +10,45 @@ export default function PrivacyPage() {
             <Shield className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-3xl font-extrabold text-white">Privacy Policy</h1>
-            <p className="text-xs text-slate-400 font-mono">Last updated: August 2026</p>
+            <h1 className="text-3xl font-extrabold text-white">
+              Privacy Policy
+            </h1>
+            <p className="text-xs text-slate-400 font-mono">
+              Last updated: August 2026
+            </p>
           </div>
         </div>
 
         <div className="space-y-6 text-slate-300 text-sm sm:text-base leading-relaxed">
           <section>
-            <h2 className="text-lg font-bold text-white mb-2">1. Information We Collect</h2>
+            <h2 className="text-lg font-bold text-white mb-2">
+              1. Information We Collect
+            </h2>
             <p className="text-slate-400">
-              EventHub collects minimal data required for operation, including Discord server IDs, user IDs for command execution logs, and configured event preferences.
+              EventHub collects minimal data required for operation, including
+              Discord server IDs, user IDs for command execution logs, and
+              configured event preferences.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-white mb-2">2. How We Use Data</h2>
+            <h2 className="text-lg font-bold text-white mb-2">
+              2. How We Use Data
+            </h2>
             <p className="text-slate-400">
-              Data is used strictly to provide automated ER:LC roleplay dispatch, track server command logs, and maintain system security. We never sell or share data with third parties.
+              Data is used strictly to provide automated ER:LC roleplay
+              dispatch, track server command logs, and maintain system security.
+              We never sell or share data with third parties.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-white mb-2">3. Data Security</h2>
+            <h2 className="text-lg font-bold text-white mb-2">
+              3. Data Security
+            </h2>
             <p className="text-slate-400">
-              All communications are encrypted in transit and at rest using industry-standard protocols to ensure your community's safety.
+              All communications are encrypted in transit and at rest using
+              industry-standard protocols to ensure your community's safety.
             </p>
           </section>
         </div>

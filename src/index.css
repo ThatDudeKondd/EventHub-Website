@@ -7,18 +7,30 @@
     background-color: #0b0f19 !important;
     color: #ffffff !important;
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      sans-serif;
   }
 
   /* Forces every single border on the site to be a clean dark slate */
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     border-color: #1e293b !important;
   }
 }
 
 @layer utilities {
   @keyframes floatSlow {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) translateX(0px);
     }
     50% {
@@ -27,7 +39,8 @@
   }
 
   @keyframes floatReverse {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) translateX(0px);
     }
     50% {

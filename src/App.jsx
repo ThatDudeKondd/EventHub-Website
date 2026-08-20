@@ -9,17 +9,17 @@ import ScrollToTop from './components/eventhub/ScrollToTop';
 import PageNotFound from './lib/PageNotFound';
 
 // Pages
-import Home from './pages/Home';
-import Commands from './pages/Commands';
-import Events from './pages/Events';
-import Status from './pages/Status';
-import Applications from './pages/Applications';
-import Documentation from './pages/Documentation';
-import Team from './pages/Team';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Affiliates from './pages/Affiliates';
-import Dashboard from './pages/Dashboard';
+import Home from './pages/home';
+import Commands from './pages/commands';
+import Events from './pages/events';
+import Status from './pages/status';
+import Applications from './pages/applications';
+import Documentation from './pages/documentation';
+import Team from './pages/team';
+import Privacy from './pages/privacy';
+import Terms from './pages/terms';
+import Affiliates from './pages/affiliates';
+import Dashboard from './pages/dashboard';
 
 export default function App() {
   return (

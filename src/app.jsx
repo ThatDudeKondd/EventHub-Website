@@ -1,25 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Layout & Utility Components
-import Navbar from './components/eventhub/Navbar';
-import Footer from './components/eventhub/Footer';
-import CursorAura from './components/eventhub/CursorAura';
-import ScrollToTop from './components/eventhub/ScrollToTop';
-import PageNotFound from './lib/PageNotFound';
+import Navbar from "./components/eventhub/navbar";
+import Footer from "./components/eventhub/footer";
+import CursorAura from "./components/eventhub/cursoraura";
+import ScrollToTop from "./components/eventhub/scrolltotop";
+import PageNotFound from "./lib/pagenotfound";
 
 // Pages
-import Home from './pages/home';
-import Commands from './pages/commands';
-import Events from './pages/events';
-import Status from './pages/status';
-import Applications from './pages/applications';
-import Documentation from './pages/documentation';
-import Team from './pages/team';
-import Privacy from './pages/privacy';
-import Terms from './pages/terms';
-import Affiliates from './pages/affiliates';
-import Dashboard from './pages/dashboard';
+import Home from "./pages/home";
+import Commands from "./pages/commands";
+import Events from "./pages/events";
+import Status from "./pages/status";
+import Applications from "./pages/applications";
+import Documentation from "./pages/documentation";
+import Team from "./pages/team";
+import Privacy from "./pages/privacy";
+import Terms from "./pages/terms";
+import Affiliates from "./pages/affiliates";
+import Dashboard from "./pages/dashboard";
 
 export default function App() {
   return (

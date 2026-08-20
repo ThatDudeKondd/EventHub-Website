@@ -1,0 +1,46 @@
+# --- Dependencies ---
+node_modules/
+.pnp/
+.pnp.js
+
+# --- Environment / secrets ---
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# --- Build output ---
+dist/
+build/
+out/
+.next/
+.nuxt/
+.vite/
+.cache/
+
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# --- Testing / coverage ---
+coverage/
+.nyc_output/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Package manager artifacts ---
+.npm/
+.yarn/
+.pnpm-store/
+
+# --- Misc ---
+*.local
+.turbo/

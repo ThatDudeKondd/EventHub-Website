@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Layout & Utility Components
 import Navbar from "./components/eventhub/navbar";
 import Footer from "./components/eventhub/footer";
-import CursorAura from "./components/eventhub/cursoraura";
-import ScrollToTop from "./components/eventhub/scrolltotop";
-import PageNotFound from "./lib/pagenotfound";
+import CursorAura from "./components/eventhub/cursorAura";
+import ScrollToTop from "./components/eventhub/scrollToTop";
+import PageNotFound from "./lib/pageNotFound";
 
 // Pages
 import Home from "./pages/home";
